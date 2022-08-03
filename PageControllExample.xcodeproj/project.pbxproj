@@ -13,6 +13,7 @@
 		A20F7C81289AB36400DA7074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F7C7F289AB36400DA7074 /* Main.storyboard */; };
 		A20F7C83289AB36500DA7074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A20F7C82289AB36500DA7074 /* Assets.xcassets */; };
 		A20F7C86289AB36500DA7074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A20F7C84289AB36500DA7074 /* LaunchScreen.storyboard */; };
+		A20F7C8E289AB86000DA7074 /* SuguePushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20F7C8D289AB86000DA7074 /* SuguePushViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A20F7C82289AB36500DA7074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A20F7C85289AB36500DA7074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A20F7C87289AB36500DA7074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20F7C8D289AB86000DA7074 /* SuguePushViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuguePushViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				A20F7C82289AB36500DA7074 /* Assets.xcassets */,
 				A20F7C84289AB36500DA7074 /* LaunchScreen.storyboard */,
 				A20F7C87289AB36500DA7074 /* Info.plist */,
+				A20F7C8D289AB86000DA7074 /* SuguePushViewController.swift */,
 			);
 			path = PageControllExample;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20F7C8E289AB86000DA7074 /* SuguePushViewController.swift in Sources */,
 				A20F7C7E289AB36400DA7074 /* ViewController.swift in Sources */,
 				A20F7C7A289AB36400DA7074 /* AppDelegate.swift in Sources */,
 				A20F7C7C289AB36400DA7074 /* SceneDelegate.swift in Sources */,
