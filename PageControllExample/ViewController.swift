@@ -35,13 +35,14 @@ class ViewController: UIViewController {
         //스토리보드 인스턴스화
         guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePushViewController") as? CodePushViewController else { return }
         
+        viewController.name = "pushData"
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func tapCodePresentBtn(_ sender: UIButton) {
         guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else { return }
         
-        
+        viewController.name = "presentData"
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
