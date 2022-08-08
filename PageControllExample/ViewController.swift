@@ -30,14 +30,18 @@ class ViewController: UIViewController {
         print("ViewController 뷰가 사라짐.")
     }
     
+    // 다운캐스팅으로 통해 해당 뷰컨트롤러의 프로퍼티에 접근 가능
     @IBAction func tapCodePushBtn(_ sender: UIButton) {
         //스토리보드 인스턴스화
-        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePushViewController") else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePushViewController") as? CodePushViewController else { return }
+        
         
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func tapCodePresentBtn(_ sender: UIButton) {
-        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") else { return }
+        guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else { return }
+        
+        
         viewController.modalPresentationStyle = .fullScreen
         self.present(viewController, animated: true, completion: nil)
     }
