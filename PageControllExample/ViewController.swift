@@ -7,8 +7,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SendDataDelegate {
 
+    @IBOutlet weak var nameLabel: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ViewController 뷰가 로드됨")
@@ -43,8 +45,18 @@ class ViewController: UIViewController {
         guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else { return }
         
         viewController.name = "presentData"
+        //delegate 위임 받는다.
+        viewController.delegate = self
+        
         viewController.modalPresentationStyle = .fullScreen
+        
         self.present(viewController, animated: true, completion: nil)
+    }
+    
+    
+    func sendData(name: String) {
+        self.nameLabel.text = name
+        self.nameLabel.sizeToFit()
     }
 }
 
