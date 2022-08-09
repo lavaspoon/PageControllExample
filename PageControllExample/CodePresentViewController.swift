@@ -27,6 +27,6 @@ class CodePresentViewController: UIViewController {
     }
     @IBAction func BackBtn(_ sender: UIButton) {
         self.delegate?.sendData(name: "lava")
-        self.presentingViewController?.dismiss(animated: true)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
 }

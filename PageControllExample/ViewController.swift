@@ -9,7 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, SendDataDelegate {
 
-    @IBOutlet weak var nameLabel: UIView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +45,10 @@ class ViewController: UIViewController, SendDataDelegate {
     @IBAction func tapCodePresentBtn(_ sender: UIButton) {
         guard let viewController = self.storyboard?.instantiateViewController(identifier: "CodePresentViewController") as? CodePresentViewController else { return }
         
-        viewController.name = "presentData"
+        viewController.name = "Lava"
         //delegate 위임 받는다.
         viewController.delegate = self
-        
         viewController.modalPresentationStyle = .fullScreen
-        
         self.present(viewController, animated: true, completion: nil)
     }
     
