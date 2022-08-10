@@ -52,7 +52,17 @@ class ViewController: UIViewController, SendDataDelegate {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    //SuguePush Get Data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //sugue.destination 프로퍼티를 통해서 전환하려는 뷰컨트롤러의 인스턴스를 가져올수 있음
+        //다운캐스팅
+        if let viewController = segue.destination as? SuguePushViewController {
+            viewController.name = "lava"
+        }
+            
+    }
     
+    //CodePresent Send Data
     func sendData(name: String) {
         self.nameLabel.text = name
         self.nameLabel.sizeToFit()
